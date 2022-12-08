@@ -1,0 +1,82 @@
+*{
+    background-color: #0f0f0f;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    margin: 5px;
+    padding: 10px;
+
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+header nav h2 i {
+    padding: 0 20px;
+}
+header nav div i {
+    padding: 0 30px;
+}
+
+#numeros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#numero div {
+    text-align: center;
+}
+#numero img {
+    border: radius 50px;;
+}
+#descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#descricao * {
+    margin-bottom: 0;
+}
+#editar-perfil {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao {
+    width: 95%;
+    border-radius: 5px;
+    background:#fa1e4e;;
+    padding: 6px 0;
+    font-weight: bolder;
+    font-size: 16px;
+    border: #fa1e4e solid 2px;
+}
+#nossos-jogos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#nossos-jogos div {
+    text-align: center;
+}
+#foto-perfil{
+    border-radius: 100px;
+}
+/*.holder {
+    display: flex;
+}
+
+.holder coluna1 coluna2{
+    display: flex;
+}
+
+.holder {
+        flex-flow: row wrap;
+        display:flex;
+        justify-content: space-between;
+}
