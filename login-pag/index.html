@@ -66,8 +66,9 @@
         var email = document.getElementById('email-id').value
         var senha = document.getElementById('password-id').value
         if(email == "admin" && senha == "admin"){
-            console.log('funcuionou');
         window.location.href = "/perfil/index.html"
+        } else {
+            window.alert('Usuario ou senha incorretos.')
         }
 }
 // ATIVANDO O BOTÃO DE ENVIAR ATRAVÉS DO ENTER
