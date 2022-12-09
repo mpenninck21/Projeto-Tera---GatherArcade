@@ -169,6 +169,14 @@ body {
     font-weight: 600;
 }
 
+.span-required {
+    display: none;
+    font-size: 12px;
+    margin: -5 -5px 10px 10px;
+    background-color: #0f0f0f91;
+    color: red;
+}
+
 
 .continue-button button {
     width: 100%;
