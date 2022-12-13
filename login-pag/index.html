@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <title>Gather Arcade – entre ou cadastre-se</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,15 +17,15 @@
                         Faça o login
                     </span>
                     <div class="wrap-input margin-top-35 margin bottom-35" >
-                        <input class="input-form" type="email" name="email" autocomplete="off"/>
+                        <input id="email-id" class="input-form" type="email" name="email" autocomplete="off" required/>
                         <span class="focus-input-form" data-placeholder="E-mail"></span>
                     </div>
                     <div class="wrap-input margin bottom-35" >
-                        <input class="input-form" type="password" name="password"/>
+                        <input id="password-id" class="input-form" type="password" name="password" required/>
                         <span class="focus-input-form" data-placeholder="Senha"></span>
                     </div>
                     <div class="container-login-form-btn">
-                        <a href="/perfil/index.html"></a><button type="button" class="login-form-btn">Login</button>
+                        <button type="button" id="login-form-btn" class="login-form-btn" onclick="logar()">Login</button>
                     </div>
                     
                     <ul class="login-utils">
@@ -46,6 +47,38 @@
             <img src="images/controle-headset-removebg-preview.png" alt="Login" width="400" height="300" class="margin-left-50">
         </div>
     </div>
-    <script src="/login-pag/script/script.js"></script>
+
+
+    <script>
+// ATIVANDO O HAS-VAL DOS INPUTS EMAIL E SENHA PARA QUE PERMANEÇAM SUSPENSOS CASO ALGO ESTEJA DIGITADO
+    let inputs = document.getElementsByClassName('input-form');
+        for (let input of inputs) {
+        input.addEventListener('blur', function (){
+        if(input.value.trim() != ""){
+        input.classList.add("has-val")
+        } else {
+        input.classList.remove("has-val")
+        }
+    })
+}
+// VALIDANDO AS CREDENCIAIS (PRÉ-DEFINIDAS) AO APERTAR NO BOTÃO DE ENVIAR
+    function logar() {
+        var email = document.getElementById('email-id').value
+        var senha = document.getElementById('password-id').value
+        if(email == "admin" && senha == "admin"){
+        window.location.href = "/perfil/index.html"
+        } else {
+            window.alert('Usuario ou senha incorretos.')
+        }
+}
+// ATIVANDO O BOTÃO DE ENVIAR ATRAVÉS DO ENTER
+    document.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const btn = document.querySelector('#login-form-btn');
+
+            btn.click();
+        }
+    })
+    </script>
 </body>
 </html>
