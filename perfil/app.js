@@ -28,3 +28,4 @@ usuario.addEventListener("blur", (e) => {
             console.log("ERRO: " +e)
         })
     })
+    
